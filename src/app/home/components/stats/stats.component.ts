@@ -1,3 +1,4 @@
+import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 
@@ -33,6 +34,9 @@ export class StatsComponent {
       },
     },
   };
+
+  // Para comprobar si esta en el navegador o en el navegador para evitar fallo en ssr
+  isBrowser = isPlatformBrowser(this.platformId);
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
