@@ -7,8 +7,8 @@
       animation-delay: $i * 500ms;
     }
   }
-  // opacity: 0;
-  > .flex--horizontal {
+    opacity: 0;
+    > .flex--horizontal {
     justify-content: center;
   }
   .features__left,
